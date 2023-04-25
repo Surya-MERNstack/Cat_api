@@ -39,22 +39,21 @@
 //  )
 
 
- const ulr_1 = 'https://meowfacts.herokuapp.com/?count=50'
-const urls = 'https://cat-fact.herokuapp.com/facts'
+ const ulr = 'https://meowfacts.herokuapp.com/?count=50'
+
 
  
 
 
-fetch(ulr_1).then (
+fetch(ulr).then (
     (response) => { 
       return  response.json()
     }
 ).then(
    (data) => {
-      console.log(data.data[0])
       let api ='';
       for(let i = 0; i < data.data.length; i++){
-              console.log(data.data[i])
+
           api = `
           <div class="card" style="width: 100%;margin-top:30px;padding:3px; background: transparent;border:2px solid white;">
           <img class="card-img-top" src="cat.jpg" height = "580px" alt="Card image cap" style= " background: transparent;">
